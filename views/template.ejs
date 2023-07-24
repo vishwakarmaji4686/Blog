@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <% if(userLogin){ %>
+            <li class="nav-item">
+              <a class="nav-link" href="/blog">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="myblog">My blog</a>
+            </li>
+            <% }else{ %>
+              <li class="nav-item">
+                <a class="nav-link" href="/singUp">Sing Up</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+              </li>
+              <% } %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div>
+    <%- include(pageName) %>
+  </div>
+
+</body>
+
+</html>
